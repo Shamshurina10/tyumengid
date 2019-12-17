@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Форум по достопримечательностям</title>
+    <meta name="keywords" content="форум, обсуждение, чат, достопримечательности" />
+    <meta name="description"
+        content="Форум на нашем сайте позволить вам обсуждать в чате достопримечательности города Тюмени" />
+    <base href="/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+</head>
+
+<body>
+    <div class="h-100 d-flex flex-column">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#" data-toggle="tooltip" data-placement="bottom" title="Главная">ТюменьГИД</a>
+            <div class="navbar-nav mr-auto">
+                <a class="nav-link navbar-brand" href="/chat">
+                    <h1 style="font-size: 20px;">Форум</h1>
+                </a>
+            </div>
+            <a class="btn btn-outline-dark" href="/logout">Выйти</a>
+        </nav>
+        <div class="flex-fill d-flex flex-column">
+            <div class="h-100 flex-fill overlow-auto">
+                <ul id="messages" class="m-0 p-0"></ul>
+            </div>
+            <form class="d-flex">
+                <input id="messageBox" class="flex-fill" placeholder="Введите сообщение..." autofocus />
+                <button class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io('/');
+    </script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/chat.js"></script>
+</body>
+
+</html>

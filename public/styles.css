@@ -1,0 +1,43 @@
+html, body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font: 13px Helvetica, Arial;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.wrapper-content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.deny-overflow {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.description {
+	font-size: 16px;
+	margin: 1rem 0;
+}
+
+#messages {
+	list-style-type: none;
+}
+
+#messages li {
+	padding: 5px 10px;
+	white-space: wrap;
+	word-wrap: break-word;
+}

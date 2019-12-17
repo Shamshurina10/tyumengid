@@ -1,0 +1,5 @@
+User-agent: *
+Sitemap: https://tyumengid.000webhostapp.com/sitemap.xml
+Host: tyumengid.000webhostapp.com
+Allow: /
+Disallow: /login

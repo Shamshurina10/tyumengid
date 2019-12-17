@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Достопримечательности Тюмени</title>
+    <meta name="keywords" content="Тюмень, достопримечательности, гид" />
+    <meta name="description" content="Наш сайт является гидом по достопримечательностям Тюмени, 
+        где вы сможете просмотреть их фотографии и обсудить их" />
+    <base href="/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#" data-toggle="tooltip" data-placement="bottom" title="Главная">ТюменьГИД</a>
+        <div class="navbar-nav mr-auto">
+            <a class="nav-link navbar-brand" href="/chat">Форум</a>
+        </div>
+        <a class="btn btn-outline-dark" href="/logout">Выйти</a>
+    </nav>
+    <div class="m-3">
+        <h1 class="text-center">Достопримечательности города Тюмени</h1>
+        <div class="row overflow-auto">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card m-2">
+                    <img src="assets/naberezhnaya.jpg" class="card-img-top" alt="Набережная реки Туры">
+                    <div class="card-body">
+                        <h5 class="card-title deny-overflow">Набережная реки Туры</h5>
+                        <a href="/embankment" class="btn btn-outline-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card m-2">
+                    <img src="assets/bridge.jpg" class="card-img-top" alt="Мост влюблённых">
+                    <div class="card-body">
+                        <h5 class="card-title deny-overflow">«Мост влюблённых»</h5>
+                        <a href="/bridge" class="btn btn-outline-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io('/');
+    </script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+</body>
+
+</html>
